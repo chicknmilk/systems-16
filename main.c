@@ -21,7 +21,6 @@ int main() {
 
   srand(getpid());
 
-  int time_sleep = rand() % 4 + 2;
 
   if (pid && pid2) {
     int status;
@@ -31,6 +30,9 @@ int main() {
     return 0;
   }
 
+
+  int time_sleep;
+  
   if (pid) {
     time_sleep = rand() % 4 + 2;
   }
