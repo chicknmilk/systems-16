@@ -19,7 +19,7 @@ int main() {
     }
   }
 
-  srand(time(getpid()));
+  srand(getpid());
 
   int time_sleep = rand() % 4 + 2;
 
