@@ -31,6 +31,13 @@ int main() {
     return 0;
   }
 
+  if (pid) {
+    time_sleep = rand() % 4 + 2;
+  }
+  else if (pid2) {
+    time_sleep = rand() % 4 + 2;
+  }
+
   sleep(time_sleep);
   printf("Child process %d finished sleeping\n", getpid());
   return time_sleep;
