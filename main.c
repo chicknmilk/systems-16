@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <time.h>
+#include <sys/wait.h>
 
 int main() {
   printf("Parent process started\n");
@@ -32,7 +33,7 @@ int main() {
 
 
   int time_sleep;
-  
+
   if (pid) {
     time_sleep = rand() % 4 + 2;
   }
