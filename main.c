@@ -19,22 +19,16 @@ int main() {
     }
   }
 
-  srand(time(NULL));
+  srand(time(getpid()));
+
+  int time_sleep = rand() % 4 + 2;
+
   if (pid && pid2) {
     int status;
     int pid_stat = wait(&status);
     printf("Child process %d has finished in %d seconds\n", pid_stat, WEXITSTATUS(status));
     printf("Parent process ended\n");
     return 0;
-  }
-
-  int time_sleep;
-
-  if (pid) {
-    time_sleep = rand() % 4 + 2;
-  }
-  if (pid2) {
-    time_sleep = rand() % 4 + 2;
   }
 
   sleep(time_sleep);
